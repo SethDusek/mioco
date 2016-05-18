@@ -232,7 +232,7 @@ fn token_from_ids(co_id: coroutine::Id, io_id: EventSourceId) -> Token {
 /// This is a temporary ID, used to distinguish event source
 /// returned by `select!` operation.
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
-pub struct EventSourceId(usize);
+pub struct EventSourceId(pub usize);
 
 impl EventSourceId {
     fn new(id: usize) -> Self {
