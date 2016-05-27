@@ -29,7 +29,7 @@ pub trait Evented {
     /// thread/coroutine before `Select::wait()`.
     ///
     /// Use `select!` macro instead.
-    unsafe fn select_add(&self, rw: RW);
+    pub unsafe fn select_add(&self, rw: RW);
 
     /// Mark the `EventSourceRef` blocked and block until `Handler` does
     /// not wake us up again.
